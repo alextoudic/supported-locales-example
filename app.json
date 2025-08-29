@@ -9,14 +9,19 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.alextoudic.expo-supported-locales",
+      "icon": {
+        "tinted": "./assets/images/tinted-icon.png"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.alextoudic.exposupportedlocales"
     },
     "web": {
       "bundler": "metro",
@@ -32,6 +37,20 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      "expo-font",
+      "expo-web-browser",
+      [
+        "expo-localization",
+        {
+          // Keep activity alive on locale change to avoid duplicate linking
+          "allowDynamicLocaleChangesAndroid": true,
+          "supportedLocales": [
+            "en",
+            "fr",
+            "es"
+          ]
         }
       ]
     ],
